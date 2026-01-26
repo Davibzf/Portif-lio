@@ -1,6 +1,6 @@
 // Typing effect
 const texts = [
-  "Software Engineer & Full+Stack",
+  "Software Engineer & Full Stack",
   "Python & Web",
   "Backend | Developer | Automação de Dados | Machine Learning"
 ];
