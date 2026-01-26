@@ -1,8 +1,8 @@
 // Typing effect
 const texts = [
-  "Transformando problemas em soluções de software",
-  "Backend • Python • Machine Learning",
-  "Portfólio em constante evolução 🚀"
+  "Software Engineer & Full+Stack",
+  "Python & Web",
+  "Backend | Developer | Automação de Dados | Machine Learning"
 ];
 
 let count = 0;
