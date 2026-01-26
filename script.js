@@ -43,5 +43,3 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
-import { Wrench, Database, Cpu, Code2, GitBranch } from "lucide-react";
-
