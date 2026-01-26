@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Card Premium</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --primary: #8c5cf5;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(120deg, #020617, #0f172a);
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+    }
+
+    /* CARD */
+    .project-card {
+      width: 100%;
+      max-width: 980px;
+      background: linear-gradient(145deg, rgba(140,92,245,0.15), rgba(2,6,23,0.95));
+      border-radius: 22px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      transition: all 0.45s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 80px rgba(140,92,245,0.45);
+    }
+
+    /* INFO */
+    .project-info h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .project-desc {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .project-tags li {
+      font-size: 0.75rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(140,92,245,0.18);
+      border: 1px solid rgba(140,92,245,0.35);
+      color: #ddd;
+    }
+
+    .project-actions a {
+      display: inline-block;
+      margin-right: 12px;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #fff;
+      background: var(--primary);
+      transition: all .3s ease;
+    }
+
+    .project-actions a.secondary {
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .project-actions a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(140,92,245,0.45);
+    }
+
+    /* PREVIEW */
+    .project-preview {
+      background: rgba(0,0,0,0.35);
+      border-radius: 16px;
+      border: 1px dashed rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 860px) {
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="project-card">
+    <div class="project-info">
+      <h3>📊 Machine Learning – Credit Scoring</h3>
+
+      <p class="project-desc">
+        Sistema de Machine Learning desenvolvido para prever risco de crédito,
+        apoiando decisões financeiras com base em dados históricos e padrões
+        comportamentais.
+      </p>
+
+      <ul class="project-tags">
+        <li>Python</li>
+        <li>Scikit-learn</li>
+        <li>Pandas</li>
+        <li>Machine Learning</li>
+        <li>Data Analysis</li>
+      </ul>
+
+      <div class="project-actions">
+        <a href="https://github.com/Davibzf/Machine-Learning-Credit-Scoring" target="_blank">
+          Ver no GitHub
+        </a>
+        <a href="#" class="secondary">Detalhes</a>
+      </div>
+    </div>
+
+    <div class="project-preview">
+      📈 Espaço reservado para prints ou gráficos do projeto
+    </div>
+  </div>
+
+</body>
+</html>
