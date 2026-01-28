@@ -125,14 +125,15 @@ h2 {
   gap: 32px;
 }
 
-.project-preview {
-  border: 1px dashed rgba(255,255,255,0.25);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
+.project-preview{
+    width: 100%;
+    max-width: 900px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
+    display: block;
+    margin: 40px auto;
 }
+
 
 .tags {
   display: flex;
