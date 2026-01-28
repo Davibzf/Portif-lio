@@ -126,12 +126,10 @@ h2 {
 }
 
 .project-preview{
-    width: 280px;
-    max-width: 300px;
-    border-radius: 16px;
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.25);
-    display: block;
-    margin: 40px auto;
+  width: 280px;
+  height: auto;
+}
+
 }
 
 
