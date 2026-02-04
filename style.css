@@ -1,182 +1,56 @@
-:root {
-  --bg: #0f172a;
-  --card: #020617;
-  --primary: #8c5cf5;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
+// Configurações Gerais
+html {
+  scroll-behavior: smooth;
+  background-color: #020617;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(120deg, #020617, #0f172a);
-  color: var(--text);
-}
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.hero span {
-  color: var(--primary);
-}
-
-.hero p {
-  margin-top: 12px;
-  color: var(--muted);
-}
-
-/* SECTIONS */
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
-}
-
-h2 {
-  margin-bottom: 24px;
-  color: var(--primary);
-}
-
-/* TECH STACK */
-.tech {
-  padding: 80px 20px;
-  background: radial-gradient(circle at top, #0b0b1a, #050510);
-}
-
-.tech-container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.tech-title {
-  font-size: 42px;
-  color: #ffffff;
-}
-
-.tech-subtitle {
-  color: #a1a1aa;
-  margin-top: 10px;
-  max-width: 600px;
-}
-
-.tech-grid {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-/* CARD */
+// Estilização das Tech Cards
 .tech-card {
-  background: linear-gradient(145deg, #0f1025, #14163a);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 28px;
-  transition: all 0.3s ease;
+  @apply flex flex-col items-center p-6 bg-white/5 border border-white/5 rounded-2xl hover_bg-white/10 hover_border-indigo-500/50 transition-all group;
+  
+  img {
+    @apply w-12 h-12 mb-4 group-hover_scale-110 transition-transform;
+  }
+  
+  span {
+    @apply text-[10px] font-bold tracking-widest uppercase;
+  }
 }
 
-.tech-card:hover {
-  border-color: rgba(168, 85, 247, 0.6);
-  transform: translateY(-6px);
+// Botões de Contato
+.contact-btn {
+  @apply flex items-center gap-3 px-8 py-4 bg-white/5 border border-white/10 rounded-2xl hover_bg-indigo-600 transition-all;
+  
+  i {
+    @apply group-hover_scale-110 transition-transform;
+  }
+  
+  span {
+    @apply font-bold;
+  }
 }
 
-.tech-card h3 {
-  color: #ffffff;
-  font-size: 20px;
-  margin-bottom: 16px;
-}
-
-/* TAGS */
-.tech-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.tech-tag {
-  padding: 6px 16px;
-  border-radius: 999px;
-  font-size: 14px;
-  color: #c084fc;
-  background: rgba(168, 85, 247, 0.15);
-  border: 1px solid rgba(168, 85, 247, 0.35);
-}
-
-
-/* PROJECT */
-.project-card {
-  background: linear-gradient(145deg, rgba(140,92,245,0.15), var(--card));
-  border-radius: 22px;
-  padding: 32px;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 32px;
-}
-
-.project-preview {
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tags {
-  display: flex;
-  gap: 10px;
-  list-style: none;
-  margin: 20px 0;
-}
-
-.tags li {
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: rgba(140,92,245,0.2);
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  padding: 12px 22px;
-  background: var(--primary);
-  border-radius: 12px;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* REVEAL */
+// Animação de Scroll (Reveal)
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: 0.7s;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  color: var(--muted);
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .project-card {
-    grid-template-columns: 1fr;
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+// Typing Cursor
+#typing::after {
+  content: '|';
+  animation: blink 0.8s infinite;
+  color: #6366f1;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
