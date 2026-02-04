@@ -1,45 +1,56 @@
-// Typing effect
-const texts = [
-  "Software Engineer & Full Stack",
-  "Python & Web",
-  "Backend | Developer | Automação de Dados | Machine Learning"
+// Configuração do Typing Effect
+const messages: string[] = [
+  "Software Engineer Student",
+  "Python Developer | Automação",
+  "Machine Learning Enthusiast"
 ];
 
-let count = 0;
-let index = 0;
-let current = "";
+let msgIndex: number = 0;
+let charIndex: number = 0;
+let deleting: boolean = false;
 
-const typingEl = document.getElementById("typing");
-
-function type() {
+function typeEffect(): void {
+  const typingEl = document.getElementById("typing");
   if (!typingEl) return;
 
-  current = texts[count];
-  typingEl.textContent = current.slice(0, index++);
-
-  if (index > current.length) {
-    setTimeout(() => {
-      index = 0;
-      count = (count + 1) % texts.length;
-    }, 2000);
+  const current = messages[msgIndex];
+  
+  if (deleting) {
+    typingEl.textContent = current.substring(0, charIndex--);
+  } else {
+    typingEl.textContent = current.substring(0, charIndex++);
   }
 
-  setTimeout(type, 80);
+  let speed = deleting ? 40 : 80;
+
+  if (!deleting && charIndex === current.length + 1) {
+    speed = 2000;
+    deleting = true;
+  } else if (deleting && charIndex === 0) {
+    deleting = false;
+    msgIndex = (msgIndex + 1) % messages.length;
+    speed = 500;
+  }
+
+  setTimeout(typeEffect, speed);
 }
 
-type();
-
-// Reveal on scroll
-const reveals = document.querySelectorAll(".reveal");
-
-function revealOnScroll() {
-  reveals.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 120) {
-      el.classList.add("active");
+// Lógica de Scroll Reveal
+function revealSections(): void {
+  const sections = document.querySelectorAll(".reveal");
+  sections.forEach((s) => {
+    const top = s.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      s.classList.add("active");
     }
   });
 }
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+// Inicialização
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", () => {
+  // @ts-ignore
+  lucide.createIcons();
+  typeEffect();
+  revealSections();
+});
