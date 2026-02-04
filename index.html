@@ -1,115 +1,121 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Davi Bezerra Fraga </title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="Imagens/favicon-32x32.png">
+<div class="bg-[#020617] text-white font-['Plus_Jakarta_Sans'] min-h-screen selection:bg-indigo-500/30">
+  
+  <nav class="fixed top-0 w-full z-50 bg-[#020617]/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+      <span class="text-xl font-black tracking-tighter uppercase">Davi<span class="text-indigo-500">.</span></span>
+      <div class="flex gap-6 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+        <a href="#sobre" class="hover:text-white transition-colors">Sobre</a>
+        <a href="#tech" class="hover:text-white transition-colors">Stack</a>
+        <a href="#projetos" class="hover:text-white transition-colors">Projetos</a>
+        <a href="#contato" class="hover:text-white transition-colors">Contato</a>
+      </div>
+    </div>
+  </nav>
 
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <header class="h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+    <div class="absolute w-[500px] h-[500px] bg-indigo-600/10 blur-[120px] rounded-full -top-48 -left-48"></div>
+    
+    <div class="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-6 relative z-10">
+      Engenheiro de Software & Dados
+    </div>
 
-  <!-- HERO -->
-  <header class="hero">
-    <h1>Olá, eu sou <span>Davi Bezerra Fraga 👾</span></h1>
-    <p id="typing"></p>
+    <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.15] mb-8 relative z-10">
+      DAVI BEZERRA <br>
+      <span class="text-indigo-500 italic font-black">FRAGA</span>
+    </h1>
+
+    <p id="typing" class="text-slate-400 text-lg md:text-xl h-8 font-medium tracking-tight relative z-10 uppercase"></p>
   </header>
 
-  <!-- SOBRE -->
-  <section class="section reveal">
-    <h2>🧑‍💻 Sobre mim</h2>
-    <p>
-      <h3>Sou estudante de Engenharia de Software (1º semestre), com forte foco em desenvolvimento em Python,
-      automação de processos e análise de dados. Tenho grande interesse em usar a tecnologia de forma prática
-      para resolver problemas reais, aumentar a eficiência e extrair insights relevantes a partir de dados.<br>
-      <br>
-    </p>
-    <p>
-      Atuo no desenvolvimento de scripts em Python e projetos práticos, aplicando lógica de programação, 
-      manipulação e análise de dados com Pandas, além de conceitos iniciais de machine learning utilizando scikit-learn. 
-      Também possuo experiência com controle de versão usando Git e GitHub, mantendo meus projetos bem organizados e devidamente documentados.<br>
-      <br>
-    </p>
-    <p>
-      Atualmente, busco uma oportunidade de estágio em Desenvolvimento de Software ou TI, onde eu possa aprender com profissionais 
-      experientes, contribuir com soluções eficientes e desenvolver ainda mais minhas habilidades por meio da prática.</h3>
-    </p>
-  </section>
-
-  <!-- TECH STACK -->
-  <section class="section reveal">
-    <h2>🛠️ Tech Stack</h2>
-
-    <div class="tech-grid">
-      <div class="tech-card">🐍<span>Python</span></div>
-      <div class="tech-card">🤖<span>Scikit-learn</span></div>
-      <div class="tech-card">📊<span>Pandas</span></div>
-      <div class="tech-card">🗄️<span>MySQL</span></div>
-      <div class="tech-card">🔧<span>Git & GitHub</span></div>
-    </div>
-  </section>
-
-  <!-- PROJETOS -->
-  <section class="section reveal">
-    <h2>💼 Projetos</h2>
-
-    <div class="project-card">
-      <div class="project-info">
-        <h2>📊 Machine Learning – Credit Scoring</h2>
-        <p>
-          Modelo de Machine Learning para avaliação de risco de crédito,
-          apoiando decisões financeiras com base em dados históricos.<br>
-        <br>
-        </p>
-
-        <div class="impact">
-          💼 <strong>Impacto:</strong> redução de inadimplência e decisões
-          mais rápidas e precisas.
+  <main class="max-w-5xl mx-auto px-6 pb-32 space-y-40 text-justify">
+    
+    <section id="sobre" class="reveal">
+      <h2 class="text-indigo-500 text-xs font-black uppercase tracking-[0.3em] mb-10 text-left">01. Sobre</h2>
+      <div class="grid md:grid-cols-5 gap-10 items-center">
+        <div class="md:col-span-3 space-y-6 text-slate-300 text-lg leading-relaxed">
+          <p>Sou estudante de <b>Engenharia de Software</b> com foco em Python, automação e análise de dados. Busco transformar problemas complexos em automações eficientes e insights acionáveis.</p>
+          <p>Atuo no desenvolvimento de modelos de <b>Machine Learning</b> para avaliação de risco e otimização de decisões.</p>
         </div>
+        <div class="md:col-span-2 bg-indigo-600 p-10 rounded-[2.5rem] text-center shadow-2xl shadow-indigo-500/20">
+          <span class="text-xs font-bold uppercase tracking-widest opacity-80">Localização</span>
+          <h4 class="text-2xl font-black mt-2 italic tracking-widest">BRASIL</h4>
+        </div>
+      </div>
+    </section>
 
-        <ul class="tags">
-          <li>Python</li>
-          <li>Machine Learning</li>
-          <li>Scikit-learn</li>
-          <li>Pandas</li>
-        </ul>
+    <section id="tech" class="reveal">
+      <h2 class="text-indigo-500 text-xs font-black uppercase tracking-[0.3em] mb-12 text-left">02. Tech Stack</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+        <div class="tech-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+          <span>Python</span>
+        </div>
+        <div class="tech-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" />
+          <span>Pandas</span>
+        </div>
+        <div class="tech-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+          <span>MySQL</span>
+        </div>
+        <div class="tech-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+          <span>Git</span>
+        </div>
+        <div class="tech-card text-center">
+          <i data-lucide="cpu" class="w-12 h-12 mb-4 text-indigo-400"></i>
+          <span class="leading-tight">Scikit <br> Learn</span>
+        </div>
+      </div>
+    </section>
 
-        <a href="https://github.com/Davibzf/Machine-Learning-Credit-Scoring"
-           target="_blank" class="btn">
-          Ver no GitHub
+    <section id="projetos" class="reveal">
+      <h2 class="text-indigo-500 text-xs font-black uppercase tracking-[0.3em] mb-12 text-left">03. Projetos</h2>
+      <div class="group bg-white/5 rounded-[2.5rem] border border-white/5 overflow-hidden flex flex-col md:flex-row transition-all hover:border-indigo-500/30">
+        <div class="p-10 md:p-16 md:w-1/2 text-left">
+          <div class="flex gap-2 mb-6 text-[10px] font-bold uppercase tracking-tighter text-indigo-400">
+            <span class="px-3 py-1 bg-indigo-500/10 rounded-full">Machine Learning</span>
+            <span class="px-3 py-1 bg-indigo-500/10 rounded-full">Finance</span>
+          </div>
+          <h3 class="text-3xl font-black mb-4">Credit Scoring AI</h3>
+          <p class="text-slate-400 mb-8 leading-relaxed">Modelo preditivo para análise de risco bancário desenvolvido com Python e Scikit-learn.</p>
+          <a href="https://github.com/Davibzf/Machine-Learning-Credit-Scoring" target="_blank" class="inline-flex items-center gap-2 bg-white text-black text-xs font-black py-4 px-8 rounded-full hover:bg-indigo-500 hover:text-white transition-all">
+            VER NO GITHUB <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div class="md:w-1/2 overflow-hidden bg-slate-900">
+          <img src="https://raw.githubusercontent.com/Davibzf/Machine-Learning-Credit-Scoring/main/Imagens/ML-CS.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000">
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="reveal text-center">
+      <h2 class="text-indigo-500 text-xs font-black uppercase tracking-[0.3em] mb-8">04. Contato</h2>
+      <h3 class="text-5xl md:text-6xl font-black tracking-tighter mb-16 italic uppercase">Conecte-se comigo</h3>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="mailto:davibezerrafraga@gmail.com" class="contact-btn group">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          <span>E-mail</span>
+        </a>
+        <a href="https://www.linkedin.com/in/davi-bezerra-fraga-319a49363" target="_blank" class="contact-btn group">
+          <i data-lucide="linkedin" class="w-5 h-5"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/Davibzf" target="_blank" class="contact-btn group">
+          <i data-lucide="github" class="w-5 h-5"></i>
+          <span>GitHub</span>
         </a>
       </div>
+    </section>
 
-      <div class="project-preview">
-        <img src="Imagens/ML-CS.png" alt="Machine Learning Credit Scoring">
-      </div>
-    </div>
-  </section>
+  </main>
 
-  <!-- CONTATO -->
-  <section class="section reveal">
-    <h2>☎️ Contato</h2>
-  <div align="center"></div>
-    <a href="mailto:davibezerrafraga@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" />
-  </a>
-    <a href="https://github.com/Davibzf" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank" />
-  </a>
-    <a href="https://www.linkedin.com/in/davi-bezerra-fraga-319a49363" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
-  </a>
-  </div>
-  </section>
-
-  <footer>
-    © 2026 • Davi Bezerra Fraga
+  <footer class="py-12 border-t border-white/5 text-center text-slate-600 text-[10px] font-black tracking-[0.4em] uppercase">
+    © 2026 DAVI BEZERRA FRAGA — ENGINEERED FOR DATA
   </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+</div>
